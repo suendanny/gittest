@@ -1,4 +1,4 @@
-package com.itheima.controller;
+﻿package com.itheima.controller;
 
 import com.itheima.utils.UploadUtils;
 import com.sun.jersey.api.client.Client;
@@ -30,7 +30,7 @@ public class FileController {
         //3. 使用跨服务器文件上传的方式，将客户端上传的文件写入到文件服务器中
         Client client = Client.create();
         //连接文件服务器
-        WebResource resource = client.resource("http://localhost:8833/file/"+uuidName);
+        WebResource resource = client.resource("http://localhost:8833/file/"+ uuidName);
         //通过resource将客户端上传的文件写入到文件服务器
         try {
             resource.put(upload.getBytes());
